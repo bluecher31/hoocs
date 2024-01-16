@@ -1,6 +1,6 @@
 [project]
 name = "hoocs"
-version = "0.1.0"
+version = "0.0.1"
 description = "Occlusion-based explainers for higher-order attributions."
 readme = "README.md"
 authors = [{ name = "Stefan Bluecher", email = "bluecher@tu-berlin.de" }]

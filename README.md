@@ -1,9 +1,10 @@
 # Higher Order OCclusion (hoocs)
 ## Introduction
-Hoocs implements a broad range of model-agnostic attributions.
+Hoocs implements a broad range of model-agnostic attributions
 - *PredDiff*  [[1]]([1]) [[2]]([2])
 - Shapley values [[3]]([3])
 - KernelSHAP [[4]]([4])
+- 
 Recently, there has been increasing interest in more in-depth analysis of models. To meet this needs, the analysis of 
 feature interactions is inevitable. Therefore, this package allows to calculate arbitrary higher-order explanations. 
 Tt is extendable to other methods, which rely on marginalizing features in input space.
