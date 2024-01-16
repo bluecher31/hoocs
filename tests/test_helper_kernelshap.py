@@ -1,6 +1,6 @@
 import numpy as np
 
-from src.hoocs import helper_kernelshap
+from hoocs import helper_kernelshap
 
 from numpy.testing import assert_allclose
 

@@ -2,8 +2,8 @@
 
 import numpy as np
 
-from src.hoocs.derived_explainer_targeted import TargetedAttributionsMethod
-from src.hoocs.imputers import simple_imputers
+from hoocs.derived_explainer_targeted import TargetedAttributionsMethod
+from hoocs.imputers import simple_imputers
 from tests import simple_models
 
 from numpy.testing import assert_allclose

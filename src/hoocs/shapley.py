@@ -2,11 +2,11 @@ import numpy as np
 from numpy.typing import NDArray
 
 from typing import Callable, List, Set
-from src.hoocs.imputers.abstract_imputer import Imputer
+from hoocs.imputers.abstract_imputer import Imputer
 
-from src.hoocs import helper_kernelshap
-from src.hoocs import helper_methods
-from src.hoocs.derived_explainer_targeted import TargetedAttributionsMethod
+from hoocs import helper_kernelshap
+from hoocs import helper_methods
+from hoocs.derived_explainer_targeted import TargetedAttributionsMethod
 
 
 def _get_unique_features(list_features: List[str]) -> NDArray:

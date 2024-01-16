@@ -12,9 +12,9 @@ Lastly, all three point effect (unshielded)
 """
 import numpy as np
 
-from src.hoocs import helper_methods
-from src.hoocs import preddiff
-from src.hoocs.imputers import simple_imputers
+from hoocs import helper_methods
+from hoocs import preddiff
+from hoocs.imputers import simple_imputers
 
 from tests import simple_models, helper
 

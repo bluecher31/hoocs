@@ -5,8 +5,8 @@ from typing import Callable, Dict, Tuple, Set
 
 from numpy.typing import NDArray
 
-from src.hoocs.imputers.abstract_imputer import Imputer
-from src.hoocs import helper_base
+from hoocs.imputers.abstract_imputer import Imputer
+from hoocs import helper_base
 
 from abc import ABC, abstractmethod
 

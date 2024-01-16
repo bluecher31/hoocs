@@ -1,7 +1,7 @@
 import numpy as np
 
-from src.hoocs.approximate_shapley_values import ApproximateShapleyValues, shapley_normalization
-from src.hoocs.imputers import simple_imputers
+from hoocs.approximate_shapley_values import ApproximateShapleyValues, shapley_normalization
+from hoocs.imputers import simple_imputers
 from tests import simple_models
 from tests.test_kernelshap import check_efficiency
 

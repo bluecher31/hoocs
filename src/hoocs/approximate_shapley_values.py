@@ -4,9 +4,9 @@ from scipy.special import binom
 from typing import Callable, Dict, List, Set
 from numpy.typing import NDArray
 
-from src.hoocs.base_explainer import BaseExplainer
-from src.hoocs.imputers.abstract_imputer import Imputer
-from src.hoocs.shapley import ShapleyValues
+from hoocs.base_explainer import BaseExplainer
+from hoocs.imputers.abstract_imputer import Imputer
+from hoocs.shapley import ShapleyValues
 
 
 def shapley_normalization(n_features: int, cardinality: int) -> float:

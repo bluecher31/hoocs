@@ -1,4 +1,4 @@
-from src.hoocs import helper_base
+from hoocs import helper_base
 
 
 def test_organize_key():

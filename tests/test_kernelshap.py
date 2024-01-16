@@ -4,8 +4,8 @@ Test routines for Shapley Values including interaction indices.
 import numpy as np
 from numpy.testing import assert_allclose
 
-from src.hoocs import kernelshap
-from src.hoocs.imputers import simple_imputers
+from hoocs import kernelshap
+from hoocs.imputers import simple_imputers
 from tests import simple_models
 
 from typing import Dict, Set
