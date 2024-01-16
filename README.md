@@ -13,22 +13,14 @@ incorporation of new conditional distributions (*imputers*) for any kind of data
 
 ## Installation
 ```
-git clone
-
-cd conditional-explainer
-
-pip install --upgrade pip  # make sure you have the up-to-data version of pip
-
-pip install -e .
+pip install hoocs
 ```
 
 ## Implement new imputers
 To add a new imputer to incorporate a suitable conditional distribution for the current data modality, 
-the user is requester to inherent from the abstract base `Imputer` class 
-in `conditional_explainer.imputers.abstract_imputers.py`.
+the user is requested to inherent from the abstract base `Imputer` class 
+in `hoocs.imputers.abstract_imputers.py`.
 This class performs basic type checking and ensures a consistent interface. 
-More advanced handling of unified conditional integrals or explicit breaking of feature dependencies is provided 
-within the `conditional_explainer` package. 
 
 ## References
 
