@@ -2,16 +2,17 @@ import numpy as np
 from numpy.typing import NDArray
 
 from typing import Callable, List, Set
-from hoocs.imputers.abstract_imputer import Imputer
+from src.hoocs.imputers.abstract_imputer import Imputer
 
-from hoocs import helper_methods, helper_kernelshap
-from hoocs.derived_explainer_targeted import TargetedAttributionsMethod
+from src.hoocs import helper_kernelshap
+from src.hoocs import helper_methods
+from src.hoocs.derived_explainer_targeted import TargetedAttributionsMethod
 
 
 def _get_unique_features(list_features: List[str]) -> NDArray:
     """Extracts all unique features contained in list_features. """
     all_features = np.concatenate([features.split(sep='^') for features in list_features])
-    unique_features = np.unique(np.array(all_features, dtype=np.int))
+    unique_features = np.unique(np.array(all_features, dtype=int))
     return unique_features
 
 

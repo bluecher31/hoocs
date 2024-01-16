@@ -3,9 +3,9 @@ import numpy as np
 
 from abc import abstractmethod
 
-from hoocs.imputers.abstract_imputer import Imputer
-from hoocs.base_explainer import BaseExplainer
-from hoocs.base_explainer import ModelFn, DictAttributions
+from src.hoocs.imputers.abstract_imputer import Imputer
+from src.hoocs.base_explainer import BaseExplainer
+from src.hoocs.base_explainer import ModelFn, DictAttributions
 
 from typing import List, Set
 from numpy.typing import NDArray

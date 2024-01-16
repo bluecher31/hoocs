@@ -1,6 +1,6 @@
 import numpy as np
 
-from hoocs.imputers.abstract_imputer import Imputer
+from src.hoocs.imputers.abstract_imputer import Imputer
 from numpy.typing import NDArray
 
 

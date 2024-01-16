@@ -1,7 +1,7 @@
 import numpy as np
 
-from hoocs.imputers import simple_imputers
-from hoocs import helper_base
+from src.hoocs.imputers import simple_imputers
+from src.hoocs import helper_base
 
 
 class TestConstantValueImputer():

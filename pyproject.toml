@@ -1,5 +1,5 @@
 [project]
-name = "sample"
+name = "hoocs"
 version = "0.1"
 description = "Occlusion-based explainers for higher-order attributions."
 readme = "README.md"
@@ -13,9 +13,11 @@ keywords = ['XAI', 'PredDiff', 'Shapley values', 'Interactions', 'Model-agnostic
 dependencies = [
     'numpy>1.20',
     'scipy',
-    'cv2',
+    'matplotlib',
+    'opencv-python',
+    'scikit-learn',
 ]
-requires-python = ">=3.9"
+requires-python = ">=3.8"
 
 [build-system]
 requires = ["setuptools", "setuptools-scm"]

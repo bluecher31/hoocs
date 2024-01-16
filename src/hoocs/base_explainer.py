@@ -5,8 +5,8 @@ from typing import Callable, Dict, Tuple, Set
 
 from numpy.typing import NDArray
 
-from hoocs.imputers.abstract_imputer import Imputer
-from hoocs import helper_base
+from src.hoocs.imputers.abstract_imputer import Imputer
+from src.hoocs import helper_base
 
 from abc import ABC, abstractmethod
 
@@ -104,7 +104,7 @@ class BaseExplainer(ABC):
         assert data.shape == (*self.shape_input, *self.shape_x), 'Incorrect data shape'
         assert segmentation.shape == data.shape, 'Segmentation does not fit to data shape'
         assert np.alltrue(segmentation > 0), 'Only positive feature labels allowed.'
-        assert segmentation.dtype == np.int, 'Non-integer segmentation.'
+        assert segmentation.dtype == int, 'Non-integer segmentation.'
         assert isinstance(target_features, set), 'target_features needs to be a set of positive integers.'
 
         features_per_sample = [set(sample_segmentation.flatten())

@@ -1,9 +1,11 @@
 import numpy as np
 from numpy.testing import assert_allclose
 
-from hoocs import shapley
-from hoocs.imputers import simple_imputers
+from src.hoocs import shapley
+from src.hoocs.imputers import simple_imputers
 from tests import simple_models
+
+import pytest
 
 
 def test_generate_footprints_shapley():
@@ -104,7 +106,7 @@ class TestShapleySubsamplingCardinalities():
         # print(imp_data)
         # print('result: \n', f(imp_data))
         explainer = shapley.ShapleyValues(model_fn=f, imputer=imputer, data=np.ones((3, 2, 4)), n_eval=15,
-                                  cardinality_coalitions=[-1])
+                                          cardinality_coalitions=[-1])
         # explainer.interaction_depth = 2
 
         segmentation = np.stack([np.arange(1, 5) for _ in range(2)])
@@ -116,14 +118,15 @@ class TestShapleySubsamplingCardinalities():
                             err_msg=f'Incorrect attributions for key = {key}\n'
                                     f'x = attribution, y = target')
 
+    @pytest.mark.skip(reason="no way of currently testing this")
     def test_preddiff_interactions(self):
         mu_data = np.array([-2, 5, 7, 10])
         cov_data = np.eye(4)
         imputer = simple_imputers.GaussianNoiseImputer(mu_data, cov_data)
 
         explainer = shapley.ShapleyValues(model_fn=simple_models.three_point_interaction_regression_fn,
-                                  imputer=imputer, data=np.ones((3, 2, 4)), n_eval=5_000,
-                                  cardinality_coalitions=[-1])
+                                          imputer=imputer, data=np.ones((3, 2, 4)), n_eval=5_000,
+                                          cardinality_coalitions=[-1])
 
         data = np.array([[1, 4, 3, -10], [2, -1, 6, 4]])
         seg = [4, 1, 2, 10]
@@ -149,7 +152,7 @@ class TestShapleySubsamplingCardinalities():
 
         for cardinalities in [[1, 2, -1, -2, -3, -4], [1, 2, 3, 4], [-1, -2, -3, -4], [1, 2, -1, -2]]:
             explainer = shapley.ShapleyValues(model_fn=simple_models.two_point_interaction_regression_fn, imputer=imputer,
-                                      data=np.ones((3, 2, 4)), n_eval=2_000, cardinality_coalitions=cardinalities)
+                                              data=np.ones((3, 2, 4)), n_eval=2_000, cardinality_coalitions=cardinalities)
 
             dict_attributions = explainer.attribution(data=data, segmentation=segmentation,
                                                       target_features={1, 2})

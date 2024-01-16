@@ -5,11 +5,11 @@ from sklearn.linear_model import LinearRegression, Ridge
 from typing import Callable, Dict, List, Set
 from numpy.typing import NDArray
 
-from hoocs.base_explainer import BaseExplainer
-from hoocs.imputers.abstract_imputer import Imputer
-from hoocs.helper_kernelshap import shap_kernel_weight
-from hoocs.helper_kernelshap import convert_coalitions_to_segmentation
-from hoocs import helper_kernelshap
+from src.hoocs.base_explainer import BaseExplainer
+from src.hoocs.imputers.abstract_imputer import Imputer
+from src.hoocs.helper_kernelshap import shap_kernel_weight
+from src.hoocs.helper_kernelshap import convert_coalitions_to_segmentation
+from src.hoocs import helper_kernelshap
 
 
 class KernelSHAP(BaseExplainer):

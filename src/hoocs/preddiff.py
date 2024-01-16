@@ -1,9 +1,9 @@
 from typing import Callable, List, Set
 from numpy.typing import NDArray
-from hoocs.imputers.abstract_imputer import Imputer
+from src.hoocs.imputers.abstract_imputer import Imputer
 
-from hoocs import helper_methods
-from hoocs.derived_explainer_targeted import TargetedAttributionsMethod
+from src.hoocs import helper_methods
+from src.hoocs.derived_explainer_targeted import TargetedAttributionsMethod
 
 
 class PredDiff(TargetedAttributionsMethod):

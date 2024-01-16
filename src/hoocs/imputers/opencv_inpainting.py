@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 
-from hoocs.imputers.abstract_imputer import Imputer
+from src.hoocs.imputers.abstract_imputer import Imputer
 from typing import Callable
 from numpy.typing import NDArray
 

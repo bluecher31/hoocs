@@ -1,7 +1,6 @@
 import numpy as np
-import pytest
 
-from hoocs import helper_kernelshap
+from src.hoocs import helper_kernelshap
 
 from numpy.testing import assert_allclose
 
@@ -73,7 +72,7 @@ def test_random_coalitions():
 
 
 def test_convert_coalitions_to_segmentation():
-    segmentation = np.stack(np.arange(1, 5) for _ in range(2))
+    segmentation = np.stack([np.arange(1, 5) for _ in range(2)])
     list_coalitions = [{1}, {2}]
     segmentation_coalitions = helper_kernelshap.convert_coalitions_to_segmentation(segmentation=segmentation,
                                                                                    list_coalitions=list_coalitions)

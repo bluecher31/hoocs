@@ -171,8 +171,11 @@ def convert_segmentation_to_list(segmentation_coalitions: NDArray) -> List[Set]:
 
 
 def convert_features_into_mask(features: Set[int], segmentation: NDArray[int]) -> NDArray[bool]:
-    mask_stacked = np.stack([int(feature) == segmentation for feature in features])
-    mask = np.sometrue(mask_stacked, axis=0)
+    if features == set():
+        mask = np.zeros_like(segmentation, dtype=bool)
+    else:
+        mask_stacked = np.stack([int(feature) == segmentation for feature in features])
+        mask = np.sometrue(mask_stacked, axis=0)
     return mask
 
 
