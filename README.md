@@ -4,10 +4,10 @@ Hoocs implements a broad range of model-agnostic attributions
 - *PredDiff*  [[1]]([1]) [[2]]([2])
 - Shapley values [[3]]([3])
 - KernelSHAP [[4]]([4])
-- 
+ 
 Recently, there has been increasing interest in more in-depth analysis of models. To meet this needs, the analysis of 
 feature interactions is inevitable. Therefore, this package allows to calculate arbitrary higher-order explanations. 
-Tt is extendable to other methods, which rely on marginalizing features in input space.
+Hoocs is extendable to other methods, which rely on marginalizing features in input space.
 
 ## Installation
 ```
@@ -18,6 +18,8 @@ pip install hoocs
 To enable reliable attributions, hooks enables simple incorporation of custom *imputers* for any kind of data modality.
 To add a new imputer, the user is requested to inherent from the abstract base `Imputer` class in `hoocs.imputers.abstract_imputers.py`.
 This class performs basic type checking and ensures a consistent interface. 
+
+Check out [Decoupling Pixel Flipping and Occlusion Strategy for Consistent XAI Benchmarks](https://arxiv.org/abs/2401.06654) if you are unsure how to choose the imputer for your specific use case. 
 
 ## References
 
